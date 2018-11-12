@@ -1,0 +1,25 @@
+<h1>User Fom</h1>
+<form #userForm="ngForm">
+  <div class="form-group">
+    <label>First name </label>
+    <input class="form-control" #nom="ngModel" pattern="[a-z]*" type="text" name="fname" [(ngModel)]="user.fname" required><br>
+  </div>
+  <div [hidden]="nom.valid">
+    the firstname is invalid
+  </div>
+  <div class="form-group">
+    <label>lasr name</label>
+    <input class="form-control" #lname="ngModel" pattern="[a-z]*" type="text" name="lname" [(ngModel)]="user.lname" required><br>
+  </div>
+  <div [hidden]="lname.valid">
+    the lastname is invalid
+  </div>
+  <div class="form-group">
+    <label>email</label>
+    <input class="form-control" #email="ngModel" pattern="[a-z]*[.][a-z]*@[a-z]*[.][a-z]*" type="text" name="email" [(ngModel)]="user.email" required><br>
+  </div>
+  <div [hidden]="email.valid">
+    the email is invalid
+  </div>
+  <input  [disabled]="userForm.invalid" type="submit" value="Ajouter" class="btn btn-sc">
+</form>

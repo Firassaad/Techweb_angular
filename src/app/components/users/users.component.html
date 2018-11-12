@@ -1,0 +1,14 @@
+users works!
+<h3>Users List</h3>
+<table style="width:100%">
+  <th>Firstname</th>
+  <th>Lastname</th>
+  <th>email</th>
+  <tr *ngFor="let user of users ; let i =index">
+
+
+    <td>{{user.fname}}</td>
+    <td> {{user.lname}}</td>
+    <td>{{user.email}}</td>
+  </tr>
+</table>
